@@ -25,7 +25,6 @@ Plugins to Try out
 #. https://github.com/kyazdani42/nvim-tree.lua
 #. https://github.com/glepnir/nvim
 #. https://github.com/gyim/vim-boxdraw
-#. https://github.com/ray-x/lsp_signature.nvim
 
 Plugin Features
 ~~~~~~~~~~~~~~~~~~
@@ -43,16 +42,11 @@ Keyboard
 
 #. Build Kyria
 
-Zsh
-~~~~~~~~~~~~~~
-
-#. bindkey for auto complete and suggestion
-#. bindkey for opening a git file with telescope
-
 Shell Software
 ~~~~~~~~~~~~~~
 
-#. https://github.com/rupa/z
+#. git-delta
+#. broot
 
 Snippet Stuff
 ~~~~~~~~~~~~~
@@ -71,8 +65,10 @@ Miscellaneous
 Doing
 =====
 
-#. ptpython
+#. git-delta
+#. broot
 #. autoformat jsons
+#. <C-w> to delete words in insert mode.
 #. https://github.com/mhinz/vim-startify
 
 Done
@@ -85,8 +81,6 @@ General Vim Stuff
 #. Copy/paste to/from clipboard
    - gotta nice remap for that
 #. Stop using H and L instead of $ and ^
-#. <C-w> to delete words in insert mode.
-    - amazing I love it
 
 Plugins to Try out
 ~~~~~~~~~~~~~~~~~~
@@ -124,10 +118,7 @@ Shell Software
 ~~~~~~~~~~~~~~
 
 #. bat
-   - love it so much
-#. broot
-   - wasn't a big fan, prefer fzf. didn't configure it that much though.
-#. git-delta
+    - love it so much
 
 Snippet Stuff
 ~~~~~~~~~~~~~

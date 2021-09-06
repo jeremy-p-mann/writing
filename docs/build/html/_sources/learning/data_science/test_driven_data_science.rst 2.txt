@@ -1,72 +1,6 @@
 Test Driven Data Science
 ------------------------
 
-
-As a mathematician, I find it easier to precisely define a concept
-before discussing it.
-
-
-.. admonition:: Definition
-    
-    A test (of code) is any mechanism to generate empirical feedback on the
-    code
-
-Tests fall into two categories:
-    - Manual tests:
-        - Exploratory
-        - Adverserial
-        - User complaints
-    - Automated tests:
-        - Those written during development
-            - unit, integration, functional, acceptance, etc.
-        - Those run during deployment ("contract tests")
-        - Those written after a deployment ("regression tests")
-
-The conventional DS workflow is manual exploratory testing, e.g. within a 
-notebook. This talk will cover automated testing.
-
-.. note::
-    
-    Under this definition, automated testing is the automation of gathering
-    empirical feedback on your code.
-
-Benefits of Automated Testing
-=============================
-
-Primary benefit of automated testing is how it scales with the complexity 
-of the application.
-
-For example, the if your model has to work on heterogenous data. This is 
-certainly the case for real world medical data, where crazy things can happen.
-
-If you develop tests with the code, comprehensive feedback can be obtained in
-minutes-hours.
-
-Examples of Useful Feedback
-===========================
-
-- Your code changes are not altering the behaviour.
-  - There's a reason Fowler devotes a chapter to testing in his Refactoring
-    book.
-- Your changes do not introduce a bug to the system. Single bug should only
-  occur once is production.
-- Your code has sufficient functionality to be released.
-
-Strategies
-==========
-
-- Test what matters: simulate deployment, develop until behavior is
-  "acceptable" 
-   - e.g. don't test the specifics of implementation (unless the implementation
-     is the product), test that the application is providing value 
-   - Don't test that your model is linear regression, test that it's 
-     performing well on a test set that is representative of deployment.
-
-
-Order of Operations
-===================
-
- 
 - Decreases average time spent by decreasing the variance of the development 
   process
 - easier to change/refactor the codebase
@@ -83,8 +17,6 @@ Order of Operations
         - json schema
     - benchmark 
     - parametrization
-- Don't validate, simulate deployment.
-    -  Use save datasets logged from deployment as fixtures
 
 
 Types of Tests:
@@ -128,38 +60,8 @@ Why Test Before Code
 - For sake of argument, assume you already going to be testing the code
   you've written.
 - Failing Test = manual test of the test.
-- Tests becomes harder to test when the code is working.
+- Test becomes harder to test when the code is working.
 - Test later = test never or test after it breaks by production.
-
-Strategies
-==========
-
-- Keep tests as lightweight as possible:
-
-    - Increase the "scope" of your fixtures
-    - Subsample from data
-- Develop off of 'mock' and 'regression' data.
-
-    - Get access to this data as early as possible in the development process,
-      either with something like SQL or synthetic data (e.g. from
-      hypothesis/schemas)
-- Be DRY with your tests 
-
-    - test suite requires maintenance, as backwards incompatible changes will
-      require changes to the test suite.
-- Parametrize when possible
-
-    - e.g. different models and different datasets
-- Start with end-to-end tests
-
-    - These will be the longest living tests, will promote end-to-end development
-    - Unit tests should be the 'top of the pyramid'
-- Embrace plugins:
-
-    - pdbpp
-    - pytest-xdist
-    - pycharm-pytest, vim-test
-    - pytest prettier
 
 Example of a (pytest) Test:
 ===========================
@@ -208,8 +110,7 @@ More Examples
 More Examples
 =============
 
-.. code-block:: python
-
+.. code-block:: 
     # todo make this parametrized
     @pytest.fixture
     def df_with_property_you_didnt_think_was_possible(filename):
@@ -233,11 +134,11 @@ More examples
 More examples
 =============
 
-.. code-block:: bash
+.. code-block:: 
 
     pytest --pdb
 
-.. code-block:: python
+.. code-block:: 
 
     def test_foo(...):
         ...
@@ -246,4 +147,24 @@ More examples
         assert ...
 
 live demo
+
+Strategies
+==========
+
+- Make tests as lightweight as possible:
+  - Increase the "scope" of your fixtures
+  - Subsample 
+- Develop off of 'mock' and 'regression' data.
+- Be DRY with your tests (tests will evolve with your code)
+- Parametrize when possible
+  - e.g. different models and different datasets
+- Start with end-to-end tests
+  - These will be the longest living tests, will promote end-to-end development
+  - Unit tests should be the 'top of the pyramid'
+- Embrace plugins:
+  - pdbpp
+  - pytest-xdist
+  - pycharm-pytest, vim-test
+  - pytest prettier
+
 
