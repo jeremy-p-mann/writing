@@ -41,6 +41,16 @@ Keyboard
 
 #. Build Kyria
 
+TMUX
+~~~~~~~~~~~~~~
+#. tmux plugin manager
+#. https://github.com/thewtex/tmux-mem-cpu-load
+#. https://github.com/olimorris/tmux-pomodoro-plus
+#. https://github.com/tmux-plugins/tmux-yank
+#. https://github.com/thewtex/tmux-mem-cpu-load
+#. https://github.com/tmux-plugins/tmux-cpu
+#. https://github.com/sainnhe/tmux-fzf
+
 Zsh
 ~~~~~~~~~~~~~~
 
