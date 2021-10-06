@@ -7,7 +7,6 @@ To Do
 General Vim Stuff
 ~~~~~~~~~~~~~~~~~
 
-#. Learn to use gnc
 #. Use folds more when viewing json docs
 #. Start playing vim games, e.g. vim-be-good
 #. Move telescope setup to lua file, load it init.lua
@@ -31,7 +30,6 @@ Plugin Features
 ~~~~~~~~~~~~~~~~~~
 
 #. Configure vim-startify
-#. Telescope my remaps.
 #. Telescope writing
 #. Make lsp find reference populate quickfix list
 #. LSP show docs in split
@@ -47,6 +45,7 @@ Zsh
 ~~~~~~~~~~~~~~
 
 #. bindkey for auto complete and suggestion
+#. bindkey for foreground/fg
 #. bindkey for opening a git file with telescope
 
 Shell Software
@@ -73,7 +72,6 @@ Doing
 
 #. ptpython
 #. autoformat jsons
-#. https://github.com/mhinz/vim-startify
 
 Done
 ====
@@ -82,6 +80,8 @@ Done
 General Vim Stuff
 ~~~~~~~~~~~~~~~~~
 
+#. Learn to use gcn
+   - not a fan
 #. Copy/paste to/from clipboard
    - gotta nice remap for that
 #. Stop using H and L instead of $ and ^
@@ -93,7 +93,11 @@ Plugins to Try out
 
 #. https://github.com/voldikss/vim-floaterm
 #. https://github.com/ThePrimeagen/harpoon
+   - nice but telescope makes it work
 #. https://github.com/godlygeek/tabular
+   - nice but never actually used it
+#. https://github.com/mhinz/vim-startify
+   - couldnt get into it
 
 
 
@@ -107,6 +111,8 @@ Plugin Features
 #. Telescope my available classes
 #. Copy a filepath from telescope using a custom action
 #. Figure out how to git blame
+#. Telescope my remaps.
+#. Telescope colorschemes
 
 Keyboard
 ~~~~~~~~
