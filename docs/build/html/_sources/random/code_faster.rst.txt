@@ -7,7 +7,6 @@ To Do
 General Vim Stuff
 ~~~~~~~~~~~~~~~~~
 
-#. Learn to use gnc
 #. Use folds more when viewing json docs
 #. Start playing vim games, e.g. vim-be-good
 #. Move telescope setup to lua file, load it init.lua
@@ -25,12 +24,12 @@ Plugins to Try out
 #. https://github.com/kyazdani42/nvim-tree.lua
 #. https://github.com/glepnir/nvim
 #. https://github.com/gyim/vim-boxdraw
+#. https://github.com/ray-x/lsp_signature.nvim
 
 Plugin Features
 ~~~~~~~~~~~~~~~~~~
 
 #. Configure vim-startify
-#. Telescope my remaps.
 #. Telescope writing
 #. Make lsp find reference populate quickfix list
 #. LSP show docs in split
@@ -42,10 +41,27 @@ Keyboard
 
 #. Build Kyria
 
+TMUX
+~~~~~~~~~~~~~~
+#. tmux plugin manager
+#. https://github.com/thewtex/tmux-mem-cpu-load
+#. https://github.com/olimorris/tmux-pomodoro-plus
+#. https://github.com/tmux-plugins/tmux-yank
+#. https://github.com/thewtex/tmux-mem-cpu-load
+#. https://github.com/tmux-plugins/tmux-cpu
+#. https://github.com/sainnhe/tmux-fzf
+
+Zsh
+~~~~~~~~~~~~~~
+
+#. bindkey for auto complete and suggestion
+#. bindkey for foreground/fg
+#. bindkey for opening a git file with telescope
+
 Shell Software
 ~~~~~~~~~~~~~~
 
-#. git-delta
+#. https://github.com/rupa/z
 
 Snippet Stuff
 ~~~~~~~~~~~~~
@@ -64,10 +80,8 @@ Miscellaneous
 Doing
 =====
 
-#. git-delta
 #. ptpython
 #. autoformat jsons
-#. https://github.com/mhinz/vim-startify
 
 Done
 ====
@@ -76,6 +90,8 @@ Done
 General Vim Stuff
 ~~~~~~~~~~~~~~~~~
 
+#. Learn to use gcn
+   - not a fan
 #. Copy/paste to/from clipboard
    - gotta nice remap for that
 #. Stop using H and L instead of $ and ^
@@ -87,7 +103,11 @@ Plugins to Try out
 
 #. https://github.com/voldikss/vim-floaterm
 #. https://github.com/ThePrimeagen/harpoon
+   - nice but telescope makes it work
 #. https://github.com/godlygeek/tabular
+   - nice but never actually used it
+#. https://github.com/mhinz/vim-startify
+   - couldnt get into it
 
 
 
@@ -101,6 +121,8 @@ Plugin Features
 #. Telescope my available classes
 #. Copy a filepath from telescope using a custom action
 #. Figure out how to git blame
+#. Telescope my remaps.
+#. Telescope colorschemes
 
 Keyboard
 ~~~~~~~~
@@ -121,6 +143,7 @@ Shell Software
    - love it so much
 #. broot
    - wasn't a big fan, prefer fzf. didn't configure it that much though.
+#. git-delta
 
 Snippet Stuff
 ~~~~~~~~~~~~~

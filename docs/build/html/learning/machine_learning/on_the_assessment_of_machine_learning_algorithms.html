@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>On the “Assessment” of Machine Learning Algorithms &#8212; Jeremy Mann&#39;s Writing 0.0.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introduction to Topological Data Analysis" href="introduction_to_tda.html" />
@@ -33,7 +33,7 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="on-the-assessment-of-machine-learning-algorithms">
+  <section id="on-the-assessment-of-machine-learning-algorithms">
 <h1>On the “Assessment” of Machine Learning Algorithms<a class="headerlink" href="#on-the-assessment-of-machine-learning-algorithms" title="Permalink to this headline">¶</a></h1>
 <p>The primary difference between statistical inference and statistical learning is how they are assessed:</p>
 <ul class="simple">
@@ -43,7 +43,7 @@
 <p>Validation has to do with the relative likelihood of data given hypotheses. For example, likelihood ratios and relative entropies are validation metrics.</p>
 <p>A classic example of an assessment is the Expected Value Framework.</p>
 <p>In some instances, these approaches agree. For example, when the repurcussions of a mistake are indistinguishable.</p>
-<div class="section" id="applications-of-inference-to-learning">
+<section id="applications-of-inference-to-learning">
 <h2>Applications of Inference to Learning<a class="headerlink" href="#applications-of-inference-to-learning" title="Permalink to this headline">¶</a></h2>
 <p>Many validation metrics admit a (fairly) smooth, analytic description which can be exploited by optimization strategies based upon gradient descent.</p>
 <p>This forms the basis of a common technique: instead of optimizing for the outcome directly, optimize over a validation metric on a modified data set. The specifics of the modification encode one’s understanding of the consequences of the model’s deployment.</p>
@@ -56,14 +56,14 @@
 <li><p>undersampling the majority</p></li>
 <li><p>directly altering the class weights in a loss function.</p></li>
 </ul>
-</div>
-<div class="section" id="applications-of-learning-to-inference">
+</section>
+<section id="applications-of-learning-to-inference">
 <h2>Applications of Learning to Inference<a class="headerlink" href="#applications-of-learning-to-inference" title="Permalink to this headline">¶</a></h2>
 <p>Learning can amplify the statistical significance of a hypothesis test. In other words, increase the effect size. There are two ways to increase the effect size: increase the effect or decrease the variance.</p>
 <p>Learners can increase the effect by forming an exclusion criteria, thereby selecting individuals suceptible to the intervention.</p>
 <p>Learners can decrease the variance by learning optimal pairings or generating simulated samples.</p>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
@@ -82,7 +82,7 @@
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../learning_main_page.html">Learning</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="machine_learning_main_page.html">Machine Learning</a><ul class="current">
@@ -126,7 +126,7 @@
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -148,7 +148,7 @@
       &copy;2020, Jeremy Mann.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

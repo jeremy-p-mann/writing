@@ -4,15 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Introduction to Topological Data Analysis &#8212; Jeremy Mann&#39;s Writing 0.0.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Machine Learning Researchers Suck at Math" href="machine_learning_researchers_suck_at_math.html" />
@@ -33,9 +34,9 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="introduction-to-topological-data-analysis">
+  <section id="introduction-to-topological-data-analysis">
 <h1>Introduction to Topological Data Analysis<a class="headerlink" href="#introduction-to-topological-data-analysis" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="todo">
+<section id="todo">
 <h2>TODO:<a class="headerlink" href="#todo" title="Permalink to this headline">¶</a></h2>
 <p>[x] Make Goals</p>
 <p>[x] Make Outline</p>
@@ -43,8 +44,8 @@
 <p>[ ] Make Deck text</p>
 <p>[ ] Make Deck drawings</p>
 <p>[ ] Make deck pdf</p>
-</div>
-<div class="section" id="goals">
+</section>
+<section id="goals">
 <h2>Goals<a class="headerlink" href="#goals" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Understand the general “zen” of TDA</p></li>
@@ -52,16 +53,16 @@
 <li><p>Understand a few applications</p></li>
 <li><p>Validation (time permitting)</p></li>
 </ol>
-</div>
-<div class="section" id="abstract">
+</section>
+<section id="abstract">
 <h2>Abstract<a class="headerlink" href="#abstract" title="Permalink to this headline">¶</a></h2>
 <p>Topological data analysis (TDA) is an ecosystem of (unsupervised) learning
 algorithms based on the ansatz: “Data has shape, shape has meaning.” After a high
 level overview, we present the primary workhorse of TDA (Mapper) and two
 applications to healthcare. Time permitting, I will outline a couple validation
 strategies.</p>
-</div>
-<div class="section" id="outline">
+</section>
+<section id="outline">
 <h2>Outline:<a class="headerlink" href="#outline" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic simple">
 <li><p>Part I: Zen of TDA</p>
@@ -93,16 +94,16 @@ strategies.</p>
 </ol>
 </li>
 </ol>
-</div>
-<div class="section" id="slides">
+</section>
+<section id="slides">
 <h2>Slides<a class="headerlink" href="#slides" title="Permalink to this headline">¶</a></h2>
 <p>Loose draft of the contents of my slide deck.</p>
-<div class="section" id="slide-1-title-slide">
+<section id="slide-1-title-slide">
 <h3>Slide 1: Title Slide<a class="headerlink" href="#slide-1-title-slide" title="Permalink to this headline">¶</a></h3>
 <p>Title: Introduction to TDA: “Data has shape, shape has meaning”</p>
 <p>Author: Jeremy Mann, PhD</p>
-</div>
-<div class="section" id="slide-2-what-is-tda">
+</section>
+<section id="slide-2-what-is-tda">
 <h3>Slide 2: What is TDA?<a class="headerlink" href="#slide-2-what-is-tda" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>TDA is the application of homotopy theory to data science, primarily through
@@ -119,8 +120,8 @@ an ecosystem of unsupervised learning algorithms</p></li>
 invertible matrices, ….</p></li>
 <li><p>Examples of analysis: number of connected components.</p></li>
 </ul>
-</div>
-<div class="section" id="slide-3-step-i">
+</section>
+<section id="slide-3-step-i">
 <h3>Slide 3: Step I<a class="headerlink" href="#slide-3-step-i" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>We want something of the form Data –&gt; Insight</p></li>
@@ -139,8 +140,8 @@ invertible matrices, ….</p></li>
 </li>
 <li></li>
 </ul>
-</div>
-<div class="section" id="id1">
+</section>
+<section id="id1">
 <h3>Slide 3: Step I<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>Idea: given input of some kind (a physical theory, a protein, a point cloud
@@ -156,8 +157,8 @@ reflect something interesting about the input.</p>
 <li><p>Point: All of these notions of connectivity (and more!) are specified once
 you construct a space!</p></li>
 </ul>
-</div>
-<div class="section" id="slide-5-dbscan">
+</section>
+<section id="slide-5-dbscan">
 <h3>Slide 5: DBSCAN<a class="headerlink" href="#slide-5-dbscan" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>DSCAN is a classical clustering algorithm</p></li>
@@ -166,8 +167,8 @@ when two points are close/similar</p></li>
 <li><p>Number of clusters is not explicitly specified ahead of time.</p></li>
 <li><p>Breaks into two steps</p></li>
 </ul>
-</div>
-<div class="section" id="slide-6-dbscan">
+</section>
+<section id="slide-6-dbscan">
 <h3>Slide 6: DBSCAN<a class="headerlink" href="#slide-6-dbscan" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>DBSCAN constructs a space (graph) from a point cloud <span class="math notranslate nohighlight">\(\{x_i\}\)</span> and a</p>
@@ -184,12 +185,12 @@ by a path in this graph.</p>
 </ul>
 </li>
 </ol>
-</div>
-<div class="section" id="slide-6-dcscan">
+</section>
+<section id="slide-6-dcscan">
 <h3>Slide 6: DCSCAN<a class="headerlink" href="#slide-6-dcscan" title="Permalink to this headline">¶</a></h3>
 <p>Explicit example</p>
-</div>
-<div class="section" id="slide-7-mapper">
+</section>
+<section id="slide-7-mapper">
 <h3>Slide 7: Mapper<a class="headerlink" href="#slide-7-mapper" title="Permalink to this headline">¶</a></h3>
 <ul>
 <li><p>Mapper modifies this construction in by integrating two pieces:
@@ -210,8 +211,8 @@ by a path in this graph.</p>
 </li>
 <li><p>Mapper requires additional choice: (overlapping) cover of range of function</p></li>
 </ul>
-</div>
-<div class="section" id="slide-8-covering-the-range">
+</section>
+<section id="slide-8-covering-the-range">
 <h3>Slide 8: Covering the range<a class="headerlink" href="#slide-8-covering-the-range" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Essentially hyperparameter means</p></li>
@@ -224,8 +225,8 @@ by a path in this graph.</p>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="slide-8-mapper-constructs-a-space">
+</section>
+<section id="slide-8-mapper-constructs-a-space">
 <h3>Slide 8: Mapper Constructs a Space<a class="headerlink" href="#slide-8-mapper-constructs-a-space" title="Permalink to this headline">¶</a></h3>
 <p>#. Mapper constructs a space (graph)
 - First step: stratify data by the “lens” function.</p>
@@ -238,8 +239,8 @@ by a path in this graph.</p>
 <li><p>Perform DBSCAN</p></li>
 <li><p>Say when two points are not being connected</p></li>
 </ul>
-</div>
-<div class="section" id="slide-9-mapper-constructs-a-space">
+</section>
+<section id="slide-9-mapper-constructs-a-space">
 <h3>Slide 9: Mapper Constructs a Space<a class="headerlink" href="#slide-9-mapper-constructs-a-space" title="Permalink to this headline">¶</a></h3>
 <p>Slide : Embed the Graph
 - There are many ways to embed graphs in low dimensions
@@ -251,21 +252,21 @@ by a path in this graph.</p>
 graph</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="slide-9">
+</section>
+<section id="slide-9">
 <h3>Slide 9<a class="headerlink" href="#slide-9" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Mapper breast cancer application</p></li>
 <li><p>Interpretation of picture</p></li>
 </ul>
-</div>
-<div class="section" id="slide-10">
+</section>
+<section id="slide-10">
 <h3>Slide 10<a class="headerlink" href="#slide-10" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
 <li><p>Mapper malaria example</p></li>
 </ul>
-</div>
-<div class="section" id="drawings">
+</section>
+<section id="drawings">
 <h3>Drawings:<a class="headerlink" href="#drawings" title="Permalink to this headline">¶</a></h3>
 <ol class="arabic simple">
 <li><p>point cloud approximation of <span class="math notranslate nohighlight">\(S^1 \coprod *\)</span> clustered by DBSCAN
@@ -274,9 +275,9 @@ graph</p></li>
 </ol>
 <p>3. picture of point cloud broken into independent parts and clustered accordingly
 4.</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
           </div>
@@ -295,7 +296,7 @@ graph</p></li>
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1 current"><a class="reference internal" href="../learning_main_page.html">Learning</a><ul class="current">
 <li class="toctree-l2 current"><a class="reference internal" href="machine_learning_main_page.html">Machine Learning</a><ul class="current">
@@ -339,7 +340,7 @@ graph</p></li>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -361,7 +362,7 @@ graph</p></li>
       &copy;2020, Jeremy Mann.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

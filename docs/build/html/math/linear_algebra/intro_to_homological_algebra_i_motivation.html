@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Introduction to Homological Algebra I: Motivation &#8212; Jeremy Mann&#39;s Writing 0.0.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Introduction to Homological Algebra IV: Maps" href="intro_to_homological_algebra_iv_maps.html" />
@@ -33,18 +33,18 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="introduction-to-homological-algebra-i-motivation">
+  <section id="introduction-to-homological-algebra-i-motivation">
 <h1>Introduction to Homological Algebra I: Motivation<a class="headerlink" href="#introduction-to-homological-algebra-i-motivation" title="Permalink to this headline">¶</a></h1>
 <p>The following is a loose script of the following <a class="reference external" href="https://www.youtube.com/watch?v=9pPS7iJ4grM">screencast</a></p>
-<div class="section" id="part-i-introduction">
+<section id="part-i-introduction">
 <h2>Part I: Introduction<a class="headerlink" href="#part-i-introduction" title="Permalink to this headline">¶</a></h2>
 <p>Hello and welcome to the first lecture in a series of lectures on “homological algebra”</p>
 <p>Instead of jumping into abstract definitions and theorems, I’ve decided to start out with a general conceptual motivation for the subject.</p>
 <p>My goal in this lecture is to highlight some of the primary themes that we’ll be revivisiting throughout the series.</p>
 <p>I might say stuff that you don’t understand, if that’s the case, don’t worry about it. I’ll either go through it in more detail in the coming lectures or just never refer to it again.</p>
 <p>Again, this lecture is purely motivational. I wouldn’t recommend it, but if you’re someone who’s not into this sort of stuff, you can safely skip this lecture. Okay, so lets get into it.</p>
-</div>
-<div class="section" id="part-ii">
+</section>
+<section id="part-ii">
 <h2>Part II<a class="headerlink" href="#part-ii" title="Permalink to this headline">¶</a></h2>
 <p>I’ll begin with what I consider to be I’ll begin by outlining what I consider to be the most powerful strategy in all of mathematics, which is to :</p>
 <p>Translate your problem of interest into a sequence of linear algebra problems</p>
@@ -61,8 +61,8 @@
 <p>A theorem of Taylor says that for small delta, F is approximated by the following expression.</p>
 <p>What’s important about this expression is that, although the left hand side is potentially super nonlinear, the right hand side is linear, and therefore reasonably tractable.</p>
 <p>We can push these methods to higher order, stumbling into the land of perturbation theory and Feynman diagrammatics, which again, only requires us to solve linear equations.</p>
-</div>
-<div class="section" id="part-iii">
+</section>
+<section id="part-iii">
 <h2>Part III<a class="headerlink" href="#part-iii" title="Permalink to this headline">¶</a></h2>
 <p>Our next example is of a more geometric flavor, one which we’ll be returning to in coming lectures.</p>
 <p>Sooo let’s try to say something about some directed graph, Gamma.</p>
@@ -89,8 +89,8 @@
 <p>Similarly the number of loops, which I’ll define later but hopefully you can use your imagination to intuit what that means, is equal to the dimension of the kernel of the boundary matrix.</p>
 <p>I won’t prove this now, but I invite ya’ll to check these statements on the following graphs.</p>
 <p>So that’s great, but let me highlight what’s really going on here: we’re translating a geometric problem into the problem of counting solutions to LINEAR equations, the coefficients of which encode geometry. But instead of just writing down a bunch of equations, we’re writing down an object that we can use to systematically generate and manipulate interesting equations.</p>
-</div>
-<div class="section" id="part-iv">
+</section>
+<section id="part-iv">
 <h2>Part IV<a class="headerlink" href="#part-iv" title="Permalink to this headline">¶</a></h2>
 <p>Now, everything that I’ve said so far is just ordinary linear algebra.</p>
 <p>This new idea, commonly referred to as homological algebra, is to think of this data, the linearization of the set of edges, the linearization of the set of edges, and the boundary map as a single linear object, like a vector space.</p>
@@ -110,8 +110,8 @@ usually explain it to people as creating compressed representations of data that
 </div></blockquote>
 <p>If you want to know more, or just check that what I’m saying isn’t complete bullshit, I’d recommend checking out Pavel Mnev’ lectures on the BV formalism, and Kevin Costello’s book Renormalization and Effective field theory.</p>
 <p>It gives me goose bumps just thinking about how this approach can simultaneously solve two really subtle physical problems, which is gauge invariance and scale dependence of theory. This is a very interesting hot topic in mathematical physics, which doesn’t get the attention it deserves.</p>
-</div>
-<div class="section" id="part-v-a-modified-strategy">
+</section>
+<section id="part-v-a-modified-strategy">
 <h2>Part V: A Modified Strategy<a class="headerlink" href="#part-v-a-modified-strategy" title="Permalink to this headline">¶</a></h2>
 <p>So with this in place, I’d like to modify our strategy:</p>
 <p>Translate your problem of interest into a sequence of “higher” linear algebra problems.</p>
@@ -120,12 +120,12 @@ usually explain it to people as creating compressed representations of data that
 <p>I’ll end this lecture with saying a bit about the oral history around the subject.</p>
 <p>Personally, I think of this business as starting out in Poincare’s algebraic and qualitative approach to geometry. This was further pushed by Noether, who noted how the stuff Poincare’ was talking could be made more highly structured. For example, she noted that a lot of the numbers Poincare was computing were in fact dimensions of vector spaces.</p>
 <p>However, the subject really took off when Grothendieck and his school further systematized and applied these methods to algebraic geometry and number theory.  His work was then consolidated by the likes of Cartan, Eilenberg, and Chevalley.</p>
-</div>
-<div class="section" id="part-vi-outro">
+</section>
+<section id="part-vi-outro">
 <h2>Part VI: Outro<a class="headerlink" href="#part-vi-outro" title="Permalink to this headline">¶</a></h2>
 <p>Awesome. In the next lecture I’ll get into the fun stuff, going through some basic definitions and examples. If you have any questions, I encourage you to leave a POLITE comment, or, if you feel like you have something productive or nice to say, feel free to leave it in the comments.</p>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
@@ -144,7 +144,7 @@ usually explain it to people as creating compressed representations of data that
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../learning/learning_main_page.html">Learning</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../math_main_page.html">Math</a><ul class="current">
@@ -188,7 +188,7 @@ usually explain it to people as creating compressed representations of data that
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -210,7 +210,7 @@ usually explain it to people as creating compressed representations of data that
       &copy;2020, Jeremy Mann.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

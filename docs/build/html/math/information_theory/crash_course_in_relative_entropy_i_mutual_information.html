@@ -4,15 +4,16 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Crash Course in Relative Entropy I: Mutual Information &#8212; Jeremy Mann&#39;s Writing 0.0.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
+    <script async="async" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
     <link rel="next" title="Probability Theory" href="../probability_theory/probability_theory_main_page.html" />
@@ -33,7 +34,7 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="crash-course-in-relative-entropy-i-mutual-information">
+  <section id="crash-course-in-relative-entropy-i-mutual-information">
 <h1>Crash Course in Relative Entropy I: Mutual Information<a class="headerlink" href="#crash-course-in-relative-entropy-i-mutual-information" title="Permalink to this headline">¶</a></h1>
 <p>The primary input for this discussion is a system <span class="math notranslate nohighlight">\(\Omega\)</span>
 along with two observables, <span class="math notranslate nohighlight">\(X,Y\)</span>:</p>
@@ -67,7 +68,7 @@ in a string is 0/1.</p>
 <p>As knowledge about the first/last character may carry knowledge of the last/first
 character.</p>
 </div>
-<div class="section" id="entropy-dependency-between-variables">
+<section id="entropy-dependency-between-variables">
 <h2>Entropy &amp; Dependency Between Variables<a class="headerlink" href="#entropy-dependency-between-variables" title="Permalink to this headline">¶</a></h2>
 <p>If <span class="math notranslate nohighlight">\(X\)</span> is independent of <span class="math notranslate nohighlight">\(Y\)</span>, the amount of information present in seeing both <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> is the information contained in seeing <span class="math notranslate nohighlight">\(X\)</span> plus the information contained in seeing <span class="math notranslate nohighlight">\(Y\)</span>.</p>
 <p>At the level of expectation values, we obtain an expression:</p>
@@ -90,8 +91,8 @@ character.</p>
 <p>In other words, dependence between variables decreases entropy.
 Therefore, the amount of this decrease can therefore be considered as a metric
 for how much <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span> depend on each other.</p>
-</div>
-<div class="section" id="mutual-information">
+</section>
+<section id="mutual-information">
 <h2>Mutual Information<a class="headerlink" href="#mutual-information" title="Permalink to this headline">¶</a></h2>
 <div class="admonition-definition admonition">
 <p class="admonition-title">Definition</p>
@@ -122,8 +123,8 @@ for how much <span class="math notranslate nohighlight">\(X\)</span> and <span c
 <div class="math notranslate nohighlight">
 \[I(X, Y) = \mathcal{S}(X , Y) - \langle \mathcal{S}(\rho_{X, Y}|_{x}) \rangle_{\rho_X}\]</div>
 </div>
-</div>
-<div class="section" id="example-noisy-channel">
+</section>
+<section id="example-noisy-channel">
 <h2>Example: Noisy Channel<a class="headerlink" href="#example-noisy-channel" title="Permalink to this headline">¶</a></h2>
 <p>In signal processing, mutual information quantifies to what extent one system is the signal/receiver for another.</p>
 <div class="admonition-example admonition">
@@ -161,8 +162,8 @@ for how much <span class="math notranslate nohighlight">\(X\)</span> and <span c
 <p class="admonition-title">Note</p>
 <p>This quantity may be thought of as analogous to a Pearson correlation coefficient. However, while the mutual information merely indicates the strength of a relationship, correlations say something about the form of the relationship.</p>
 </div>
-</div>
-<div class="section" id="example-correlated-gaussians">
+</section>
+<section id="example-correlated-gaussians">
 <h2>Example: Correlated Gaussians<a class="headerlink" href="#example-correlated-gaussians" title="Permalink to this headline">¶</a></h2>
 <p>Let’s say we’re considering a 2D gaussian with features <span class="math notranslate nohighlight">\(X\)</span> and <span class="math notranslate nohighlight">\(Y\)</span>, Pearson correlation coefficient <span class="math notranslate nohighlight">\(c_{XY}\)</span>, and equal standard deviations. In this case, the mutual information takes on an elegant form:</p>
 <div class="math notranslate nohighlight">
@@ -178,8 +179,8 @@ for how much <span class="math notranslate nohighlight">\(X\)</span> and <span c
 <p>This gives a conceptual, heuristic interpretation of Principal Component Analysis: you’re finding composite features which contain no information about each other.</p>
 </div>
 <p>Mutual information is about comparing two distributions: the “real” distribution and the distribution which assume the features are independent. In other words, mutual information is a “relative” notion of entropy.</p>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
@@ -198,7 +199,7 @@ for how much <span class="math notranslate nohighlight">\(X\)</span> and <span c
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul class="current">
 <li class="toctree-l1"><a class="reference internal" href="../../learning/learning_main_page.html">Learning</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="../math_main_page.html">Math</a><ul class="current">
@@ -241,7 +242,7 @@ for how much <span class="math notranslate nohighlight">\(X\)</span> and <span c
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -263,7 +264,7 @@ for how much <span class="math notranslate nohighlight">\(X\)</span> and <span c
       &copy;2020, Jeremy Mann.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |

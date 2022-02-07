@@ -121,6 +121,11 @@ Testing is a development tool III
 
 - Forget how to use your code? Copy and paste from your tests
     - Test are a form documentation you know is up to date.
+    - They also document all the acceptance criteria accumulated throughout
+      a project.
+    - Some languages, e.g. Rust, look for tests inside documentation.
+      - in python, you need a external framework + plugin.
+      
 
 Why Test Before Code
 ====================
@@ -246,4 +251,20 @@ More examples
         assert ...
 
 live demo
+
+Notes on Python
+===============
+
+The Python requires greater automated testing relative to other programming
+languages (e.g. Java, C++, Rust etc.)
+
+
+Behaviorial Components
+======================
+
+- The emotional communication around testing can be counter-productive (unless
+  one is very skilled).
+
+Benefits
+======================
 

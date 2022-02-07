@@ -4,15 +4,15 @@
 <html>
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
     <title>Test Driven Data Science &#8212; Jeremy Mann&#39;s Writing 0.0.0 documentation</title>
-    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-    <link rel="stylesheet" href="../../_static/alabaster.css" type="text/css" />
-    <script id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../../_static/alabaster.css" />
+    <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
     <script src="../../_static/jquery.js"></script>
     <script src="../../_static/underscore.js"></script>
     <script src="../../_static/doctools.js"></script>
-    <script async="async" src="https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.7/latest.js?config=TeX-AMS-MML_HTMLorMML"></script>
     <link rel="index" title="Index" href="../../genindex.html" />
     <link rel="search" title="Search" href="../../search.html" />
    
@@ -31,8 +31,92 @@
 
           <div class="body" role="main">
             
-  <div class="section" id="test-driven-data-science">
+  <section id="test-driven-data-science">
 <h1>Test Driven Data Science<a class="headerlink" href="#test-driven-data-science" title="Permalink to this headline">¶</a></h1>
+<p>As a mathematician, I find it easier to precisely define a concept
+before discussing it.</p>
+<div class="admonition-definition admonition">
+<p class="admonition-title">Definition</p>
+<p>A test (of code) is any mechanism to generate empirical feedback on the
+code</p>
+</div>
+<dl class="simple">
+<dt>Tests fall into two categories:</dt><dd><ul class="simple">
+<li><dl class="simple">
+<dt>Manual tests:</dt><dd><ul>
+<li><p>Exploratory</p></li>
+<li><p>Adverserial</p></li>
+<li><p>User complaints</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Automated tests:</dt><dd><ul>
+<li><dl class="simple">
+<dt>Those written during development</dt><dd><ul>
+<li><p>unit, integration, functional, acceptance, etc.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><p>Those run during deployment (“contract tests”)</p></li>
+<li><p>Those written after a deployment (“regression tests”)</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+</dd>
+</dl>
+<p>The conventional DS workflow is manual exploratory testing, e.g. within a
+notebook. This talk will cover automated testing.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Under this definition, automated testing is the automation of gathering
+empirical feedback on your code.</p>
+</div>
+<section id="benefits-of-automated-testing">
+<h2>Benefits of Automated Testing<a class="headerlink" href="#benefits-of-automated-testing" title="Permalink to this headline">¶</a></h2>
+<p>Primary benefit of automated testing is how it scales with the complexity
+of the application.</p>
+<p>For example, the if your model has to work on heterogenous data. This is
+certainly the case for real world medical data, where crazy things can happen.</p>
+<p>If you develop tests with the code, comprehensive feedback can be obtained in
+minutes-hours.</p>
+</section>
+<section id="examples-of-useful-feedback">
+<h2>Examples of Useful Feedback<a class="headerlink" href="#examples-of-useful-feedback" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Your code changes are not altering the behaviour.
+- There’s a reason Fowler devotes a chapter to testing in his Refactoring</p>
+<blockquote>
+<div><p>book.</p>
+</div></blockquote>
+</li>
+<li><p>Your changes do not introduce a bug to the system. Single bug should only
+occur once is production.</p></li>
+<li><p>Your code has sufficient functionality to be released.</p></li>
+</ul>
+</section>
+<section id="strategies">
+<h2>Strategies<a class="headerlink" href="#strategies" title="Permalink to this headline">¶</a></h2>
+<ul>
+<li><p>Test what matters: simulate deployment, develop until behavior is
+“acceptable”</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>e.g. don’t test the specifics of implementation (unless the implementation
+is the product), test that the application is providing value</p></li>
+<li><p>Don’t test that your model is linear regression, test that it’s
+performing well on a test set that is representative of deployment.</p></li>
+</ul>
+</div></blockquote>
+</li>
+</ul>
+</section>
+<section id="order-of-operations">
+<h2>Order of Operations<a class="headerlink" href="#order-of-operations" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Decreases average time spent by decreasing the variance of the development
 process</p></li>
@@ -83,7 +167,8 @@ process</p></li>
 </dl>
 </li>
 </ul>
-<div class="section" id="types-of-tests">
+</section>
+<section id="types-of-tests">
 <h2>Types of Tests:<a class="headerlink" href="#types-of-tests" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Performed by users
@@ -94,8 +179,8 @@ process</p></li>
 </ul>
 <p>I’ll be talking about automated tests.
 The only code that’s not tested is code that’s not used.</p>
-</div>
-<div class="section" id="testing-is-a-development-tool-i">
+</section>
+<section id="testing-is-a-development-tool-i">
 <h2>Testing is a development tool I<a class="headerlink" href="#testing-is-a-development-tool-i" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
@@ -107,8 +192,8 @@ The only code that’s not tested is code that’s not used.</p>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="testing-is-a-development-tool-ii">
+</section>
+<section id="testing-is-a-development-tool-ii">
 <h2>Testing is a development tool II<a class="headerlink" href="#testing-is-a-development-tool-ii" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
@@ -123,8 +208,8 @@ The only code that’s not tested is code that’s not used.</p>
 <li><p>Can safely refactor: you already have a test that you know
 will fail (because you saw it fail) if you mess up</p></li>
 </ul>
-</div>
-<div class="section" id="testing-is-a-development-tool-iii">
+</section>
+<section id="testing-is-a-development-tool-iii">
 <h2>Testing is a development tool III<a class="headerlink" href="#testing-is-a-development-tool-iii" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><dl class="simple">
@@ -135,8 +220,8 @@ will fail (because you saw it fail) if you mess up</p></li>
 </dl>
 </li>
 </ul>
-</div>
-<div class="section" id="why-test-before-code">
+</section>
+<section id="why-test-before-code">
 <h2>Why Test Before Code<a class="headerlink" href="#why-test-before-code" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>For sake of argument, assume you already going to be testing the code
@@ -145,9 +230,9 @@ you’ve written.</p></li>
 <li><p>Tests becomes harder to test when the code is working.</p></li>
 <li><p>Test later = test never or test after it breaks by production.</p></li>
 </ul>
-</div>
-<div class="section" id="strategies">
-<h2>Strategies<a class="headerlink" href="#strategies" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id1">
+<h2>Strategies<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <ul>
 <li><p>Keep tests as lightweight as possible:</p>
 <blockquote>
@@ -200,8 +285,8 @@ require changes to the test suite.</p></li>
 </div></blockquote>
 </li>
 </ul>
-</div>
-<div class="section" id="example-of-a-pytest-test">
+</section>
+<section id="example-of-a-pytest-test">
 <h2>Example of a (pytest) Test:<a class="headerlink" href="#example-of-a-pytest-test" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
 <span class="k">def</span> <span class="nf">df</span><span class="p">():</span>
@@ -233,8 +318,8 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
 </ul>
 </dd>
 </dl>
-</div>
-<div class="section" id="more-examples">
+</section>
+<section id="more-examples">
 <h2>More Examples<a class="headerlink" href="#more-examples" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
 <span class="k">def</span> <span class="nf">imputed_df</span><span class="p">(</span><span class="n">original_df</span><span class="p">,</span> <span class="n">imputer</span><span class="p">):</span>
@@ -251,9 +336,9 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
     <span class="p">)</span><span class="o">.</span><span class="n">all</span><span class="p">()</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="id1">
-<h2>More Examples<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id2">
+<h2>More Examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># todo make this parametrized</span>
 <span class="nd">@pytest</span><span class="o">.</span><span class="n">fixture</span>
 <span class="k">def</span> <span class="nf">df_with_property_you_didnt_think_was_possible</span><span class="p">(</span><span class="n">filename</span><span class="p">):</span>
@@ -267,15 +352,15 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
 </pre></div>
 </div>
 <p>Fix the bug, ensure every merge to main that it won’t reappear</p>
-</div>
-<div class="section" id="id2">
-<h2>More examples<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id3">
+<h2>More examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
 <li><p>Test that a low bias model can overfit a subsample of data.</p></li>
 </ul>
-</div>
-<div class="section" id="id3">
-<h2>More examples<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="id4">
+<h2>More examples<a class="headerlink" href="#id4" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>pytest --pdb
 </pre></div>
 </div>
@@ -287,8 +372,8 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
 </pre></div>
 </div>
 <p>live demo</p>
-</div>
-</div>
+</section>
+</section>
 
 
           </div>
@@ -307,7 +392,7 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
 
 
 <h3>Navigation</h3>
-<p class="caption"><span class="caption-text">Contents:</span></p>
+<p class="caption" role="heading"><span class="caption-text">Contents:</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="../learning_main_page.html">Learning</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../math/math_main_page.html">Math</a></li>
@@ -332,7 +417,7 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
   <h3 id="searchlabel">Quick search</h3>
     <div class="searchformwrapper">
     <form class="search" action="../../search.html" method="get">
-      <input type="text" name="q" aria-labelledby="searchlabel" />
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
       <input type="submit" value="Go" />
     </form>
     </div>
@@ -354,7 +439,7 @@ notebooks) it’s hard to interact with the code you’re writing.</p></li>
       &copy;2020, Jeremy Mann.
       
       |
-      Powered by <a href="http://sphinx-doc.org/">Sphinx 3.4.3</a>
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.2.0</a>
       &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
       
       |
