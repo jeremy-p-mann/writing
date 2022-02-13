@@ -8,3 +8,4 @@ Insert what you mean by "Probability Theory"
    :caption: Contents
 
    probabilistic_notation
+   tables_to_probabilities
