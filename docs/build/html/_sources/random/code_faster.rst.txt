@@ -108,7 +108,8 @@ Plugins to Try out
    - nice but never actually used it
 #. https://github.com/mhinz/vim-startify
    - couldnt get into it
-
+#. https://github.com/lewis6991/gitsigns.nvim
+#. https://github.com/rcarriga/nvim-notify
 
 
 Plugin Features
