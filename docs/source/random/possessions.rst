@@ -13,6 +13,22 @@ Clothes
 #. x socks
 #. x shoes
 
+Cleaning
+========
+
+- Liquids
+    - All purpose cleaning spray
+    - Dish Soap
+    - Toilet cleaning liquid
+- Dishes
+    - Sponges
+    - Dish rag
+- Surfaces
+    - Wet Mop
+    - vacuum
+    - Cleaning rags
+    - Toilet brush
+
 Cooking
 =======
 
@@ -27,6 +43,7 @@ Cooking
 - Bowl:
     - Large metal bowl
     - Mixing bowl
+- Cooking Rags
 
 Feeding
 =======
