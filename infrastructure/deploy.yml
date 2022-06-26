@@ -1,0 +1,28 @@
+---
+- name: Deploy website to s3
+  hosts: localhost
+  vars:
+    - s3_bucket: www.jeremypmannwriting.com
+    - index_html: ../docs/build/html
+  tasks:
+
+    - name: Create S3 bucket with correct policy
+      s3_bucket:
+        name: "{{ s3_bucket }}"
+        policy: "{{ lookup( 'file','bucket_policy.json' )}}"
+        state: present
+
+    - name: Configure an s3 bucket as a website
+      community.aws.s3_website:
+        name: "{{ s3_bucket }}"
+        state: present
+
+    - name: Build the documentation
+      ansible.builtin.shell: make html
+      args:
+        chdir: ../docs
+
+    - name: Sync content
+      community.aws.s3_sync:
+        bucket: "{{ s3_bucket }}"
+        file_root:  "{{ index_html }}"
