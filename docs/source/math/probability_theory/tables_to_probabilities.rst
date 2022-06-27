@@ -6,61 +6,84 @@ Slide 1
 
 Hello. In this lecture, I'd like to describe a construction that goes from
 things that can be represented in physical memory to a single mathematical
-abstraction. The video represents “things that can be represented in physical
-memory” as tables while probability distributions are the “single mathematical
-abstraction”.
+abstraction. 
+
+I'll represent "Things that can be represented in memory” as tables while
+probability distributions will be our “single mathematical abstraction”.
+
+**1 -> 2**
 
 Slide 2
 -------
 
-So I need to produce a probability distribution from the data of a table.
+In short, I need to produce a probability distribution from the data of a
+table.
 
-Probability distributions are precisely defined objects. To make my life easier,
-I will begin by giving a precise definition of a table that's convenient 
-for our discussion.
+**2 -> 3**
+
+Probability distributions have precise definitions. Therefore, to make my life
+easier, I will begin by giving a precise definition of a table that's
+convenient for our discussion.
 
 Next, I'll introduce a general probabilistic construction.
 
 We will then accomplish our goal by applying this construction to tables and
-then describe the output.
+describing the output.
+
+**3 -> 4**
 
 To keep this video brief, I won't give much motivation to this construction.
 Suffice it to say that math gives us lots of tools to do things with 
 probability distributions.
+
+**4 -> 5**
 
 Slide 3
 -------
 
 To anchor our discussion, let's review a specific table, called FooBar.
 
+**5 -> 6**
+
 This table is indexed by a set, let's call it I, with 4 elements, 0, 1, 2, 3.
 There are two columns, 'foo' and 'bar'. In other words the set of columns, 
 let's call it J, has two elements.
+
+**6 -> 7**
 
 Note that each row of FooBar is an element of a two dimensional space,
 R J, the set of J-tuples of real numbers. Furthermore we can think of as the 
 set of maps from the set of columns, J to the real numbers. 
 
+**7 -> 8**
+
 Slide 4
 -------
 
 So let's see if we can extract a precise definition from this perspective on
-tables. For simplicity, we'll only consider every entry in our table is  float
+tables. For simplicity, we'll only consider tables for which every entry is a
 float.
 
-A table is the data of:
 
-An set of indices, I which parametrizes the rows of the table.
+In this case, a table is the data of:
+
+A set of indices, I, which parametrizes the rows of the table.
+
+**8 -> 9**
 
 An set of columns, J
+
+**9 -> 10**
 
 Finally, we have the entries of the table, which we can think of as a map 
 from I to the set of J-tuples of real numbers.
 
-In other words an association of, for every index i, J-many real number x i j.
+In other words an association of, for every index i, which we think of as a 
+pointer to a row, J-many real numbers x i j.
+
 In the lingua franca of machine learning, I'll call the set of J-tuples of real
-numbers feature space. From this perspective, a table is a map from a set
-indexing some samples into a feature space.
+numbers feature space. From this perspective, a table is a map from a set of
+samples into a feature space.
 
 Note that this definition is a "row-centric" definition.
 
@@ -72,63 +95,86 @@ Slide 5
 Let's say that there are N rows, and the index is 0 to N-1
 Further, let's assume there are m columns, let's call them 0 to m-1.
 
-In this case, the table is the data of for each whole number between 0 and
-N-1, a vector of dimension m. I.e. N m-component vectors.
+**10 -> 11**
+
+In this case, the table is the data of, for each whole number between 0 and
+N-1, a vector of dimension m. I.e. N vectors with m-components.
+To re-iterate, N is the number of samples, and m is the number of features.
+
+**11 -> 12**
 
 Alternatively, we can see this data as an n by m matrix of real numbers.
 
-Although I should warn you that, although this 
+Although I should warn you that, 
 
-Finally, hopefully it's clear that this data is the same as N samples 
-each of which has m features.
+**12 -> 13**
+
+On an abstract level, a table is a bunch of samples, each of which has m
+features.
 
 So yea, that's the first part: a precise definition of a table. 
 And now for the probabilistic construction.
+
+**13 -> 14**
 
 Slide 6
 -------
 
 This construction takes two pieces of input:
 
-First A map, let's call it pi, between two sets: X_0 to X_1.
+First a map, let's call it pi, between two sets: X_0 to X_1.
 
-Second, a probability distribution on the source of pi, X_0, let's call it rho.
+Second, a probability distribution on the source of pi, i.e. X_0, let's call it
+rho.
 
-The output of this construction is a probability distribution on the 
-target of pi, X_1, pi star rho. We call this distribution the pushforward of 
-rho along pi.
+**14 -> 15**
+
+The output of this construction is a probability distribution on the target of
+pi, i.e. X_1, pi star rho. We call this distribution the pushforward of rho
+along pi.
 
 Of course, I still have to define this distribution. Recall that if you 
-know how to compute expectation values of real-valued function with respect 
+know how to compute expectation values of real-valued functions with respect 
 to a distribution, you know the distribution.
+
+**15 -> 16**
 
 In our case, the pushforward of rho along pi is characterized by the following.
 
-Note that, given a real-valued function on X_1, O, which I'll call an observable,
-note that we obtain an observable on X_0 by first applying pi and then 
-applying O. This new function is often to referred to as the pullback of
+Note that, given O, a real-valued function on X_1, which I'll call an
+observable, we obtain an observable on X_0 by first applying pi and
+then applying O. This new function is often to referred to as the pullback of
 rho along pi.
 
 As rho is a distribution on X_0 and the pullback of O along pi is an observable
-on X_0, it. 
+on X_0, we can compute the expectation value of the pullback of O with respect
+to rho. This is the number on the right hand side of the equation.
 
 Therefore, we can use this maneuvre to define the expectation value of
 O with respect to the pushforward of rho along pi as the expectation of 
-the pullback of O along pi with respect to rho.
+the pullback of O along pi with respect to rho. 
 
-pushingforward as the adjoint of pulling back, aka precomposition.
+As I've told you how to compute expectation values with respect to pi star rho,
+I've given you a definition of pi star rho.
+
+Colloquially, pushing forward is the adjoint of pulling back, aka
+precomposition.
+
+**16 -> 17**
 
 Slide 7
 -------
 
 So just to summarize, given a map of sets pi, we obtain a function
-that sends a probability distribution, rho, on the souce of the map to 
+that sends a probability distribution, rho, on the souce of the map to a
 probability distribution, pi star rho, on the target of the map.
 
-So we're used to thinking of probability distributions as associating
-numbers to events. Therefore, we should probably address the question, how
-do we compute probabilities with respect to the pushforward of a distribution
-in terms of the the map and the original distribution?
+So many of you may be used to thinking of probability distributions as
+associating numbers to events. Therefore, we should probably address the
+question, how do we compute probabilities with respect to the pushforward of a
+distribution in terms of the the map and the original distribution?
+
+**17 -> 18**
 
 Slide 8
 -------
@@ -137,9 +183,14 @@ So our definition of is in terms observables. Therefore, if we want to say
 something about events, aka measurable subsets of the event space, we should 
 think of events as a real-valued functions.
 
-This is straight forward. Given a subset A, the function takes an element x to 1
-if x is in A, and 0 otherwise. We'll call this function chi sub A, the 
-characteristic function of A.
+
+This is straightforward. Given a subset A, the desired function takes an
+element x to 1 if x is in A, and 0 otherwise. We'll call this function chi sub
+A, the characteristic function of A.
+
+In a different language, this map "classifies" the event A.
+
+**18 -> 19**
 
 If you think a bit, you'll realize that the probability of A is the expectation
 value of chi sub A. 
@@ -150,11 +201,15 @@ of chi sub A with pi.
 I'll leave it as an exercise to show that this function is the characteristic
 function of the pre-image of A with respect to pi.
 
-Putting this all together, we see that the probability A with respect to pi 
-star A is the probability of all elements of X_0 which map to A under pi
-with respect to rho.
+**19 -> 20**
+
+Putting this all together, we see that the probability A with respect to pi
+star A is the probability, with respect to rho, of all elements of X_0 which
+map to A.
 
 Goal accomplished. Now, let's go through some concrete examples.
+
+**20 -> 21**
 
 Slide 9
 -------
@@ -162,8 +217,12 @@ Slide 9
 For example, let's say that pi projects a two dimensional space spanned by x 
 and y onto the x coordinate and a probability distribution on R two.
 
+**21 -> 22**
+
 In this case, we can compute the probability density, at least heuristically,
 as the following integral.
+
+**22 -> 23**
 
 Classically, this pushforward goes by the name of the marginal distribution
 of rho associated to X.
@@ -173,6 +232,8 @@ Slide 10
 
 Let's say that pi is the inclusion of a finite subset, let's call it U,
 of Euclidean space. 
+
+**24 -> 25**
 
 Let's say we have the uniform distribution on X zero to X n.
 

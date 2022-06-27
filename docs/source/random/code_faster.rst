@@ -16,12 +16,10 @@ Plugins to Try out
 ~~~~~~~~~~~~~~~~~~
 
 #. https://github.com/rcarriga/vim-ultest
-#. https://github.com/mfussenegger/nvim-dap
 #. https://github.com/tpope/vim-surround
 #. https://github.com/glacambre/firenvim
 #. https://github.com/ThePrimeagen/vim-be-good
 #. https://github.com/tjdevries/train.nvim
-#. https://github.com/kyazdani42/nvim-tree.lua
 #. https://github.com/glepnir/nvim
 #. https://github.com/gyim/vim-boxdraw
 #. https://github.com/ray-x/lsp_signature.nvim
@@ -82,6 +80,7 @@ Doing
 
 #. ptpython
 #. autoformat jsons
+#. https://github.com/mfussenegger/nvim-dap
 
 Done
 ====

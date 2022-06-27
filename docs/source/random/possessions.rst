@@ -95,6 +95,7 @@ Office
 - Adjustable height desk
 - External monitor
 - Keyboard
+- Mouse
 
 Entertainment
 =============
@@ -112,4 +113,3 @@ Content Creation
 - Microphone
 - Drone
 - Tripod
-
