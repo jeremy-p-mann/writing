@@ -21,6 +21,7 @@
       ansible.builtin.shell: make html
       args:
         chdir: ../docs
+      tags: build
 
     - name: Sync content
       community.aws.s3_sync:
