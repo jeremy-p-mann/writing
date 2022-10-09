@@ -17,9 +17,10 @@ Linehan.
 These two figures are my primary influences.
 
 .. note:: 
+   I do not view longevity to be an optimization problem.  Occasionally, the language of optimization can be useful. Other times, it's dangerous.
 
-I do not view longevity to be an optimization problem.  Occasionally, the
-language of optimization can be useful. Other times, it's dangerous.
+
+
 
 .. toctree::
    :maxdepth: 2

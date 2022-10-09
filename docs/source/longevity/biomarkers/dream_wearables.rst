@@ -9,7 +9,8 @@ The following are a sketch of my dream wearable.
 #. (Continuous) Blood Glucose Monitors
 #. Thermometer
 
-Although each of these are commercially available in some form, the current state of products have a number of products:
+Although each of these are commercially available in some form, the current
+state of products have a number of products:
 
 #. **Lack of Validation**
 
@@ -21,12 +22,15 @@ Although each of these are commercially available in some form, the current stat
 
 #. **Lack of Integration**
 
-   - With essentially no exceptions, the list above requires four different products, whose data is scattered throughout different proprietary databases.
+   - With essentially no exceptions, the list above requires four different
+     products, whose data is scattered throughout different proprietary
+     databases.
 
 #. **Wearables scattered throughout body**
 
    - Not to mention in many cases this also means multiple products to charge.
 
-Very few of them have any external validation. Moreover, the user's access to this data is severely limited. 
+Very few of them have any external validation. Moreover, the user's access
+to this data is severely limited. 
 
 
