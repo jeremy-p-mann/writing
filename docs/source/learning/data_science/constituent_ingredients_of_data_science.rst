@@ -18,7 +18,7 @@ subconstituents.
         - Arrays
         - Signal Processing 
 
-#. Software Development
+#. Software Engineering
     - Documentation
     - Text Editing
         - IDE, Vim, etc.
