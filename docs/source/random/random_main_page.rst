@@ -11,3 +11,5 @@ Writing I don't really feel like coherently organizing
    2021_new_years_resolutions
    code_faster
    possessions
+   values
+   agile_from_first_principle:

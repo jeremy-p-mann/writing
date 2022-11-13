@@ -8,3 +8,4 @@ Say what you mean by biomarkers
    :caption: Contents
 
    dream_wearables
+   labs

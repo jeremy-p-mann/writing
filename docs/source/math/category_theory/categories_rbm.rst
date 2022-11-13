@@ -8,13 +8,12 @@ assume that we are only working with a single datatype, which we'll denote as:
 .. math::
    \mathcal{D}
 
-
 .. note::
     
     Our discussion below can be augmented to include finite collections of 
     datatypes without much difficulty.
 
-Every table has a primary key, "index", which we model as a finite set:
+Every table has an  "index", which we model as a finite set:
 
    .. math::
       I \in \mathrm{Set}
@@ -27,7 +26,6 @@ Every table has a primary key, "index", which we model as a finite set:
 
 A column is an association of a datatype for every primary key. In other
 words, it's a map:
-
 
    .. math::
       \begin{align*}
@@ -62,8 +60,10 @@ The universal property of the product allows us to see this as a single map:
 corresponding to thinking about table as a tuple of values (of the same
 cardinality) for every index value.
 
-Many of the different APIs for tabular data come from playing around with
-adjunctions.
+.. note::
+
+    Many of the different APIs for tabular data come from playing around with
+    adjunctions.
 
 For example, the data above is equivalent to an entry for every pair of column
 and row keys:

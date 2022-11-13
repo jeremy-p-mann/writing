@@ -10,3 +10,4 @@ This section contains my thoughts on Data Science.
    constituent_ingredients_of_data_science
    types_of_data_scientists
    structure_of_my_ipynbs
+   resources

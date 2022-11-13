@@ -4,14 +4,23 @@ Core Possessions
 Clothes
 =======
 
-#. x tshirts
-#. x jacket
-#. x boxers
-#. x shorts
-#. x compression shorts
-#. x collared shirts
-#. x socks
-#. x shoes
+- Head
+    - Beanie
+    - Sun hat
+- Torso
+    - tshirts
+    - winter jacket
+    - Heavy 
+    - causual collard shirts
+    - fancy collard shirts
+- Pelvis
+    - boxers
+    - shorts
+    - Pants
+    - compression shorts
+- Legs
+    - socks
+    - shoes
 
 Cleaning
 ========
@@ -53,6 +62,8 @@ Feeding
 - Utensils:
     - 2-4 different forks
     - 2-4 spoons
+- Table
+- 2-4 Chairs
 
 Hygeine
 =======
@@ -85,7 +96,8 @@ Movement
 - Lacrosse ball
 - Straps
    - ratchet strap
-   - presss strap
+   - press strap handle
+   - Ankle Strap
 - Elastic bands
 - Mace bell
 
@@ -96,6 +108,7 @@ Office
 - External monitor
 - Keyboard
 - Mouse
+- Mousepad
 
 Entertainment
 =============
